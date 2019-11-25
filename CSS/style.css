@@ -5,6 +5,9 @@ footer{
   padding: 15px;
   height: 100px;
 }
+form{
+	height:600px;
+}
 .carousel-caption{
   font-size: 2em ;
   color: black ;
@@ -20,9 +23,24 @@ footer{
 }
 .card{
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 10  px;
   margin-top: 20px;
   margin-bottom: 20px;
   display: inline-block;
   justify-content: center;
+}
+.form-group h1{
+	font-size: 3em;
+	color: #06AFF3;
+	text-align: center;
+	font-family: Verdana;
+}
+.preg{
+	width:150px;
+	display:block;
+	margin:auto;
+}
+.container-fluid{
+  background-color: grey;
+  padding: 50px;  
 }
