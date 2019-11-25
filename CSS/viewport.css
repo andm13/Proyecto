@@ -39,7 +39,7 @@
     display: inline-block;
   }
   .container-fluid{
-    background-color: grey;
+    background-color: rgba(195,187,187,0.3);
     padding: 2%;
   }
 
