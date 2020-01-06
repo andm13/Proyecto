@@ -10,7 +10,17 @@
     <!--Css link-->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/viewport.css">
-    <script type="text/javascript" src='../Javascript/contacto.js'></script>
+    <script type="text/javascript" >
+      window.onload = function () {
+        var envia = document.getElementById("enviar");
+        envia.onclick = function () {
+          var mail = document.getElementById("email").value;
+          if (mail == "") {
+            alert("Falta llenar el Correo Electronico");
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <!--barra de navegacion-->
@@ -47,7 +57,7 @@
         <div class="form-group">
       	<h1>Dudas, sugerencias, comentarios...</h1>
           <label for="email">Correo electrónico</label>
-          <input type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+          <input required type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Tema</label>
@@ -60,7 +70,7 @@
         </div>
         <div class="form-group">
           <label for="texto">Escriba su mensaje:</label>
-          <textarea class="form-control" id="texto" rows="3"></textarea>
+          <textarea required class="form-control" id="mensaje" rows="3"></textarea>
         </div>
         <button type="button" class="btn btn-primary" name="button" id="enviar">Enviar</button>
         <img src="../Imagenes/preg.jpg"/ class="preg">
