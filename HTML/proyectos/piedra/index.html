@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Piedra papel o tijera</title>
+<style>
+	img{
+	    width: 5%;	
+	}
+	#c{
+	 	background-color: aqua;
+		border-radius: 10px;
+		border-color: black;
+	 	width: auto;
+	}
+</style>
+</head>
+
+<body>
+	<script>
+			//alert(op);	
+			var op;
+			
+			function asd(){
+			op = Math.floor(Math.random()*(2+1));
+			var jug = document.getElementsByName("opcion");
+			var op2;
+			for(i=0; i<jug.length; i++){
+				if(jug[i].checked){
+				var jugador=jug[i].value;
+				}
+			}
+				
+				if(op==0 && jugador=="Piedra"){
+					op2="Piedra"	
+					document.getElementById("pc").src="img/piedra.png";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\nes un EMPATE");
+				}
+				if(op==0 && jugador=="Papel"){
+					op2="Piedra"	
+					document.getElementById("pc").src="img/piedra.png";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\n¡Felicidades, ganó!");
+				}
+				if(op==0 && jugador=="Tijera"){
+					op2="Piedra"	
+					document.getElementById("pc").src="img/piedra.png";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\nPedió :c suerte en la próxima");
+				}
+				if(op==1 && jugador=="Piedra"){
+					op2="Papel"	
+					document.getElementById("pc").src="img/papel.jpg";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\nPedió :c suerte en la próxima");
+				}	
+				if(op==1 && jugador=="Papel"){
+					op2="Papel"	
+					document.getElementById("pc").src="img/papel.jpg";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\nes un EMPATE");
+				}
+				if(op==1 && jugador=="Tijera"){
+					op2="Papel"	
+					document.getElementById("pc").src="img/papel.jpg";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\n¡Felicidades, ganó!");
+				}
+				if(op==2 && jugador=="Piedra"){
+					op2="Tijera"	
+					document.getElementById("pc").src="img/tijera.png";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\n¡Felicidades, ganó!");
+				}
+				if(op==2 && jugador=="Tijera"){
+					op2="Tijera"	
+					document.getElementById("pc").src="img/tijera.png";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\nes un EMPATE");
+				}	
+				if(op==2 && jugador=="Papel"){
+					op2="Tijera"	
+					document.getElementById("pc").src="img/tijera.png";
+					alert("Jugador selecciona: "+jugador+"\nMáquina selecciona: "+op2+"\nPedió :c suerte en la próxima");
+				}
+			}
+			
+	</script>
+    <div id=c>
+	<h1>Piedra, papel o tijera</h1>
+    </div>
+	<h2>Jugador</h2>
+	<form>
+    	<input type="radio" id="piedra" name="opcion" value="Piedra"/>
+    	<label for="piedra">
+    		<img src="img/piedra.png">
+    	</label>
+    	<input type="radio" id="papel" name="opcion" value="Papel"/>
+    	<label for="papel">
+    		<img src="img/papel.jpg">
+    	</label>
+    	<input type="radio" id="tijera" name="opcion" value="Tijera"/>
+    	<label for="tijera">
+    		<img src="img/tijera.png">
+    	</label>
+		</br>
+        <input type="button" value="Jugar" id="jugar" onClick="asd()"/>
+    </form>
+    <h2>Máquina</h2>
+	<div id="maq">
+		<p><img src="img/pc.png"/><img src="img/igual.png"/><img src="img/cuadro-blanco.png" id="pc" /></p>
+	</div>	
+	
+</body>
+</html>
