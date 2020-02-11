@@ -53,7 +53,7 @@
     </nav>
     <!--Form -->
     <div class="container-fluid">
-      <form>
+      <form action='../BD/envio.php' method="POST">
         <div class="form-group">
       	<h1>Dudas, sugerencias, comentarios...</h1>
           <label for="email">Correo electrónico</label>
@@ -61,18 +61,13 @@
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Tema</label>
-          <select class="form-control" id="Mensaje">
-            <option>Solicitud</option>
-            <option>Duda</option>
-           	<option>Sugerencia</option>
-           	<option>Queja</option>
-          </select>
+          <input type="text" name="asunto" id="asunto" class="form-control" placeholder="Ingrese Asunto">
         </div>
         <div class="form-group">
           <label for="texto">Escriba su mensaje:</label>
-          <textarea required class="form-control" id="mensaje" rows="3"></textarea>
+          <textarea required class="form-control" name="mensaje" id="mensaje" rows="3"></textarea>
         </div>
-        <button type="button" class="btn btn-primary" name="button" id="enviar">Enviar</button>
+        <button type="submit" class="btn btn-primary" name="button" id="enviar">Enviar</button>
         <img src="../Imagenes/preg.jpg"/ class="preg">
       </form>
     </div>
